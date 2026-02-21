@@ -1,0 +1,51 @@
+:root {
+  /* Design Tokens - Cores fixas da sua paleta */
+  --color-blue-light: #007aff;
+  --color-blue-dark: #003fff;
+  --color-white: #f0ede6;
+  --color-gray-light: #afafaf;
+  --color-gray-dark: #121212;
+  --color-black: #050506;
+
+  /* --- MODO LIGHT (Padrão) --- */
+  --bg-body: var(--color-white);
+  --text-main: var(--color-black);
+  --text-secondary: var(--color-gray-dark);
+  --card-border: var(--color-gray-light);
+  --accent: var(--color-blue-light);
+  --btn-text: var(--color-white);
+
+  /* FONTES */
+  --font-poppins: "Poppins", sans-serif;
+  --font-plus: "Plus Jakarta Sans", sans-serif;
+}
+
+/* --- MODO DARK --- */
+[data-theme="dark"] {
+  --bg-body: var(--color-black);
+  --text-main: var(--color-white);
+  --text-secondary: var(--color-gray-light);
+  --card-bg: var(--color-gray-dark);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --accent: var(--color-blue-light);
+  /* Azul mantém-se para identidade visual */
+  --btn-text: var(--color-white);
+}
+
+/* SCROLLBAR */
+
+/* Largura */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+  background-color: var(--Preto);
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+  background: var(--Azul);
+  border-radius: 25px;
+}
