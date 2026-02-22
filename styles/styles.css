@@ -1,7 +1,16 @@
 body {
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s ease;
     background-color: var(--bg-body);
-    /* Adicionado aqui */
+    overflow: hidden;
+}
+
+/* Garante que o AOS não quebre o layout flex */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
 }
 
 .container {
@@ -21,17 +30,22 @@ body {
 }
 
 /* Previne que o card saia da tela ao dar o scale */
-.section-links, .section-projetos-recentes, .section-conectese {
+.section-links,
+.section-projetos-recentes,
+.section-conectese {
     perspective: 1000px;
 }
 
 /* Deixa a transição de cores do Dark Mode suave junto com a GSAP */
-.portfolio-link, .projeto, .card-contato {
+.portfolio-link,
+.projeto,
+.card-contato {
     will-change: transform, opacity;
 }
 
 /* Remove o foco azul feio em volta dos botões ao clicar */
-button:focus, a:focus {
+button:focus,
+a:focus {
     outline: none;
 }
 
