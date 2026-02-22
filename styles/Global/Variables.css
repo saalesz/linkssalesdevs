@@ -1,5 +1,5 @@
 :root {
-  /* Design Tokens - Cores fixas da sua paleta */
+  /* Design Tokens - Cores fixas */
   --color-blue-light: #007aff;
   --color-blue-dark: #003fff;
   --color-white: #f0ede6;
@@ -7,17 +7,18 @@
   --color-gray-dark: #121212;
   --color-black: #050506;
 
+  /* FONTES */
+  --font-poppins: "Poppins", sans-serif;
+  --font-plus: "Plus Jakarta Sans", sans-serif;
+
   /* --- MODO LIGHT (Padrão) --- */
   --bg-body: var(--color-white);
   --text-main: var(--color-black);
   --text-secondary: var(--color-gray-dark);
-  --card-border: var(--color-gray-light);
+  --card-gradient: linear-gradient(113.2deg, #F6F6F6 0%, #EBE9E2 59.08%);
+  --card-border: rgba(154, 152, 148, 0.2);
+  --card-bg: #F6F6F6;
   --accent: var(--color-blue-light);
-  --btn-text: var(--color-white);
-
-  /* FONTES */
-  --font-poppins: "Poppins", sans-serif;
-  --font-plus: "Plus Jakarta Sans", sans-serif;
 }
 
 /* --- MODO DARK --- */
@@ -25,27 +26,8 @@
   --bg-body: var(--color-black);
   --text-main: var(--color-white);
   --text-secondary: var(--color-gray-light);
-  --card-bg: var(--color-gray-dark);
+  --card-gradient: linear-gradient(113.2deg, #1A1A1A 0%, #121212 59.08%);
   --card-border: rgba(255, 255, 255, 0.1);
+  --card-bg: var(--color-gray-dark);
   --accent: var(--color-blue-light);
-  /* Azul mantém-se para identidade visual */
-  --btn-text: var(--color-white);
-}
-
-/* SCROLLBAR */
-
-/* Largura */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Fundo */
-::-webkit-scrollbar-track {
-  background-color: var(--Preto);
-}
-
-/* Scroll */
-::-webkit-scrollbar-thumb {
-  background: var(--Azul);
-  border-radius: 25px;
 }

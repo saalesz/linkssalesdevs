@@ -1,35 +1,38 @@
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
-const body = document.body;
+const html = document.documentElement;
 
-// Caminhos dos ícones (ajuste conforme sua pasta assets/icon)
+// Caminhos dos ícones
 const sunIcon = "assets/icon/svgs/Sol.svg"; 
 const moonIcon = "assets/icon/svgs/Lua.svg";
 
-// Função para aplicar o tema
 function setTheme(theme) {
     if (theme === 'dark') {
-        body.classList.add('dark-mode');
-        themeIcon.src = moonIcon;
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.src = moonIcon; 
         localStorage.setItem('theme', 'dark');
     } else {
-        body.classList.remove('dark-mode');
+        html.setAttribute('data-theme', 'light');
         themeIcon.src = sunIcon;
         localStorage.setItem('theme', 'light');
     }
 }
 
-// Verifica se o usuário já tem uma preferência salva
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    setTheme(savedTheme);
-}
+// Verifica preferência salva ou define LIGHT como padrão
+const savedTheme = localStorage.getItem('theme') || 'light';
+setTheme(savedTheme);
 
-// Evento de clique
 themeToggle.addEventListener('click', () => {
-    const isDark = body.classList.contains('dark-mode');
-    setTheme(isDark ? 'light' : 'dark');
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = (currentTheme === 'light') ? 'dark' : 'light';
     
-    // Animação extra: pequeno pulo ao clicar
-    gsap.fromTo(themeIcon, { scale: 0.5, rotate: -45 }, { scale: 1, rotate: 0, duration: 0.5, ease: "back.out(1.7)" });
+    setTheme(newTheme);
+    
+    // Animação GSAP
+    if (typeof gsap !== 'undefined') {
+        gsap.fromTo(themeIcon, 
+            { scale: 0.5, rotate: -90, opacity: 0 }, 
+            { scale: 1, rotate: 0, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }
+        );
+    }
 });
