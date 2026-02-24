@@ -1,7 +1,6 @@
 body {
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s ease;
     background-color: var(--bg-body);
-    overflow: hidden;
 }
 
 /* Garante que o AOS não quebre o layout flex */
@@ -15,7 +14,7 @@ body {
 
 .container {
     width: 100%;
-    min-height: 1345px;
+    min-height: 1360px;
     overflow-x: hidden;
     position: relative;
     background-color: var(--bg-body);
@@ -179,14 +178,14 @@ body.dark-mode .theme-btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 0px;
+    padding: 40px 0px;
     gap: 20px;
 
     position: relative;
     width: 100%;
     height: auto;
     left: 0px;
-    top: 120px;
+    top: 100px;
 
     overflow: hidden;
 }
@@ -768,5 +767,270 @@ body.dark-mode .theme-btn {
                 font-weight: 800;
             }
         }
+    }
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Header */
+    .section-perfil {
+        width: calc(100% - 360px);
+        height: auto;
+        left: 200px;
+        top: 80px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-link {
+        width: 515px;
+        height: 223px;
+    }
+
+    .icon-portfolio {
+        left: 30px;
+        top: 30px;
+    }
+
+    .text-portfolio {
+        left: 40px;
+        top: 55px;
+    }
+
+    .iconContainer {
+        left: 470px;
+        bottom: 125px;
+    }
+
+    /* Projetos recentes */
+
+    .section-projetos-recentes {
+        gap: 20px;
+
+        width: 515px;
+    }
+
+    .projeto {
+        width: 247.5px;
+        height: 164px;
+
+        & .icon-projeto {
+            left: 20px;
+            top: 20px;
+        }
+    }
+
+    .info-projeto {
+        left: 20px;
+        top: 40px;
+    }
+
+    .ContainerIconProjeto {
+        width: 20px;
+        height: 20px;
+        left: 215px;
+        bottom: 90px;
+
+        & img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    /* Contatos */
+
+    .section-conectese {
+        width: 515px;
+        height: auto;
+    }
+
+    .card-contato {
+        gap: 290px;
+
+        width: 515px;
+    }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+@media (min-width: 1280px) {
+
+    /* Header */
+    .section-perfil {
+        width: calc(100% - 765px);
+        height: auto;
+        left: calc(50% - (100% - 765px)/2);
+        top: 80px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-link {
+        width: 515px;
+        height: 223px;
+    }
+
+    .icon-portfolio {
+        left: 30px;
+        top: 30px;
+    }
+
+    .text-portfolio {
+        left: 40px;
+        top: 55px;
+    }
+
+    .iconContainer {
+        left: 470px;
+        bottom: 125px;
+    }
+
+    /* Projetos recentes */
+
+    .section-projetos-recentes {
+        gap: 20px;
+
+        width: 515px;
+    }
+
+    .projeto {
+        width: 247.5px;
+        height: 164px;
+
+        & .icon-projeto {
+            left: 20px;
+            top: 20px;
+        }
+    }
+
+    .info-projeto {
+        left: 20px;
+        top: 40px;
+    }
+
+    .ContainerIconProjeto {
+        width: 20px;
+        height: 20px;
+        left: 215px;
+        bottom: 90px;
+
+        & img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    /* Contatos */
+
+    .section-conectese {
+        width: 515px;
+        height: auto;
+    }
+
+    .card-contato {
+        gap: 290px;
+
+        width: 515px;
+    }
+
+    /* Footer */
+
+    .feitopor {
+
+        left: calc(50% - 224px/2 + 450px);
+    }
+
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+
+
+    /* Header */
+    .section-perfil {
+        width: calc(100% - 1325px);
+        height: auto;
+        left: calc(50% - (100% - 1325px)/2);
+        top: 80px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-link {
+        width: 515px;
+        height: 223px;
+    }
+
+    .icon-portfolio {
+        left: 30px;
+        top: 30px;
+    }
+
+    .text-portfolio {
+        left: 40px;
+        top: 55px;
+    }
+
+    .iconContainer {
+        left: 470px;
+        bottom: 125px;
+    }
+
+    /* Projetos recentes */
+
+    .section-projetos-recentes {
+        gap: 20px;
+
+        width: 515px;
+    }
+
+    .projeto {
+        width: 247.5px;
+        height: 164px;
+
+        & .icon-projeto {
+            left: 20px;
+            top: 20px;
+        }
+    }
+
+    .info-projeto {
+        left: 20px;
+        top: 40px;
+    }
+
+    .ContainerIconProjeto {
+        width: 20px;
+        height: 20px;
+        left: 215px;
+        bottom: 90px;
+
+        & img {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    /* Contatos */
+
+    .section-conectese {
+        width: 515px;
+        height: auto;
+    }
+
+    .card-contato {
+        gap: 290px;
+
+        width: 515px;
+    }
+
+    /* Footer */
+
+    .feitopor {
+        left: calc(50% - 224px/2 + 700px);
     }
 }
