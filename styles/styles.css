@@ -96,7 +96,6 @@ body.dark-mode .theme-btn {
 
     overflow: hidden;
 
-    filter: drop-shadow(11.5px 18.5px 8.5px rgba(33, 33, 33, 0.01)) drop-shadow(6.5px 10.5px 7.5px rgba(33, 33, 33, 0.05)) drop-shadow(3px 4.5px 5.5px rgba(33, 33, 33, 0.09)) drop-shadow(0.5px 1px 3px rgba(33, 33, 33, 0.1));
     border-radius: 100%;
 
     flex: none;
